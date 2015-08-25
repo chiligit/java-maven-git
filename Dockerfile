@@ -18,4 +18,4 @@ VOLUME ["/opt/docker-app"]
 
 EXPOSE 8080
 RUN ls
-RUN java -jar target/docker-app-1.0-SNAPSHOT.jar
+RUN java -jar docker-app/target/docker-app-1.0-SNAPSHOT.jar
