@@ -11,3 +11,5 @@ ENV MAVEN_HOME /usr/share/maven
 WORKDIR /opt
 
 RUN git clone https://github.com/chiligit/java-maven-git.git
+
+ENTRYPOINT /bin/bash
