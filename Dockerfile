@@ -14,7 +14,6 @@ RUN git clone https://github.com/chiligit/docker-app.git
 RUN ls
 RUN cd docker-app; ls; mvn package
 
-
 VOLUME ["/opt/docker-app"]
 EXPOSE 8080
 
