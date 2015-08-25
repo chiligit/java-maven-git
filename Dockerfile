@@ -12,4 +12,6 @@ WORKDIR /opt
 
 RUN git clone https://github.com/chiligit/java-maven-git.git
 
-ENTRYPOINT /bin/bash
+VOLUME ["/opt"]
+
+EXPOSE 22
