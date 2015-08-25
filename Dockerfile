@@ -10,13 +10,12 @@ ENV MAVEN_HOME /usr/share/maven
 
 WORKDIR /opt
 RUN git clone https://github.com/chiligit/docker-app.git
-cd docker-app
 
 RUN ls
-RUN mvn package
+RUN cd docker-app; mvn package
 
 
 VOLUME ["/opt/docker-app"]
 EXPOSE 8080
 
-RUN java -jar docker-app/target/docker-app-1.0-SNAPSHOT.jar
+RUN cd docker-app; java -jar target/docker-app-1.0-SNAPSHOT.jar
