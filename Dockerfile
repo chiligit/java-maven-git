@@ -17,5 +17,5 @@ RUN git clone https://github.com/chiligit/docker-app.git
 VOLUME ["/opt/docker-app"]
 
 EXPOSE 8080
-
-RUN java -jar /opt/docker-app/target/docker-app-1.0-SNAPSHOT.jar
+RUN ls
+RUN java -jar target/docker-app-1.0-SNAPSHOT.jar
