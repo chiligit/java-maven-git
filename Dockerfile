@@ -9,13 +9,14 @@ RUN curl -fsSL http://archive.apache.org/dist/maven/maven-3/$MAVEN_VERSION/binar
 ENV MAVEN_HOME /usr/share/maven
 
 WORKDIR /opt
-RUN mkdir docker-app
-RUN cd docker-app
-
 RUN git clone https://github.com/chiligit/docker-app.git
+cd docker-app
+
+RUN ls
+RUN mvn package
+
 
 VOLUME ["/opt/docker-app"]
-
 EXPOSE 8080
-RUN ls
+
 RUN java -jar docker-app/target/docker-app-1.0-SNAPSHOT.jar
